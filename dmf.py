@@ -631,7 +631,7 @@ app.layout = html.Div([
                     id='text-input-gridSize',
                     type='number',
                     min=3,
-                    max=16,
+                    max=16, # 分割数を増やしたいとき変更
                     step=1,
                     value=3,
                     style={'height':'30px','width': '30px', 'display': 'inline-block', 'vertical-align': 'middle'}
@@ -697,5 +697,4 @@ app.layout = html.Div([
         style={'display': 'block'}
     ),
 ])
-#port 8050を使用できない場合は変更
-app.run_server(host='0.0.0.0', port=8050)
+app.run_server(port=8050) # port 8050を使用できない場合は変更
